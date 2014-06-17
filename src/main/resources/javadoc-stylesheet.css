@@ -478,25 +478,25 @@ Custom CSS, not part of JDK 1.7 defaults
 pre.code {
   margin: 1ex 1em;
   padding: 1ex 1em 0ex 1em;
-  border: 1px dotted
+  border: 1px dotted;
+  background-color: #FFFFFF
 }
-pre.code span.i {
+pre.code span.i, code span.i {
   font-style: italic;
-  text: #000099
+  color: #000000
 }
-code span.i {
-  font-style: italic;
-  text: #000099
-}
-pre.code span.k {
+pre.code span.k, code span.k {
   color: #990000
 }
-code span.k {
-  color: #990000
-}
-pre.code span.l {
+pre.code span.l, code span.l {
   color: #000099
 }
-code span.l {
-  color: #000099
+pre.code span.c, code span.c {
+  color: #009900
+}
+pre.java span.i, code.java span.i {
+  font-style: normal
+} 
+pre.java span.c, code.java span.c {
+  font-style: italic
 }
