@@ -1,0 +1,9 @@
+<page title="Helpers" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <para>TODO: The XML fragment needed to import the maven artifact.</para>
+  <xi:include href="index.xml" xpointer="xpointer(/page/para[1])"/>
+  <xi:include href="../maven.xml" xpointer="xpointer(/page/para[1])"/>
+  <links>
+    <link title="Documentation" href="index.html"/>
+    <link title="Source code" href="http://github.com/beerdragon/helpers"/>
+  </links>
+</page>

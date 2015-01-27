@@ -1,0 +1,53 @@
+<page title="Helpers">
+  <para>Miscellaneous helper scripts and resources used to build the other projects.
+  The main components of the project are settings for the Eclipse IDE and resources
+  for creating Javadoc.</para>
+  <section title="Eclipse settings">
+    <para>All Java source code in these projects has been autoformatted using an
+    Eclipse plugin. The settings in <code>eclipse-java-formatting.xml</code> can be
+    imported and, for example, used on save to maintain code consistency.</para>
+  </section>
+  <section title="Javadoc stylesheet">
+    <para>Including Java code fragments in Javadoc comments is a useful way to
+    explain and exemplify the classes and methods being documented. The
+    <code>javadoc-stylesheet.css</code> resource is a default JDK 1.7 stylesheet
+    with some additions to assist in formatting such code samples in a manner
+    similar to many popular IDEs.</para>
+    <para>A <code>pre</code> tag is used to contain code. This allows for appropriate
+    indentation to be used. Additional <code>span</code> tags are used to specify
+    keywords (<code>k</code>), identifiers (<code>i</code>), comments
+    (<code>c</code>) and literals (<code>l</code>). For example:</para>
+    <para type="java">
+      <javadoc>
+        <li>Lorum ipsem, etc, foo:</li>
+        <li/>
+        <li>&lt;pre class="code java"&gt;</li>
+        <indent>
+          <li>&lt;span class="k"&gt;public class&lt;/span&gt; &lt;span class="i"&gt;Foo&lt;/span&gt; {</li>
+          <indent>
+            <li/>
+            <li>&lt;span class="k"&gt;private int&lt;/span&gt; &lt;span class="i"&gt;_bar&lt;/span&gt; = &lt;span class="i"&gt;1234&lt;/span&gt;;</li>
+            <li/>
+            <li>&lt;span class="c"&gt;// ... etc&lt;/span&gt;</li>
+            <li/>
+          </indent>
+          <li>}</li>
+        </indent>
+        <li>&lt;/pre&gt;</li>
+      </javadoc>
+      <kw>public</kw><t> </t><id>something</id><t> ()</t>
+      <block>
+        <linecomment>...</linecomment>
+      </block>
+    </para>
+    <para>Would render with appropriate syntax highlighting defined by the
+    stylesheet. The styles are divided to give a generic <code>code</code> class
+    which defines some common formatting and then a more specific <code>java</code>
+    class. This pattern then allows code examples to be given in alternative
+    languages such as C++.</para>
+  </section>
+  <links>
+    <link title="Maven artifact" href="maven.html"/>
+    <link title="Source code" href="http://github.com/beerdragon/helpers"/>
+  </links>
+</page>
