@@ -1,9 +1,40 @@
 <page title="Helpers" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <para>TODO: The XML fragment needed to import the maven artifact.</para>
   <xi:include href="index.xml" xpointer="xpointer(/page/para[1])"/>
   <xi:include href="../maven.xml" xpointer="xpointer(/page/para[1])"/>
+  <para>Adding the following fragment to a <code>pom.xml</code> will include the
+  Javadoc stylesheet.</para>
+  <para type="xml">
+    <project>
+      <comment>...</comment>
+      <build>
+        <comment>...</comment>
+        <plugins>
+          <comment>...</comment>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <comment>...</comment>
+            <configuration>
+              <comment>...</comment>
+              <stylesheetfile>javadoc-stylesheet.css</stylesheetfile>
+            </configuration>
+            <comment>...</comment>
+            <dependencies>
+              <comment>...</comment>
+              <dependency>
+                <xi:include href=".pom.xml" xpointer="xmlns(ns=http://maven.apache.org/POM/4.0.0)xpointer(/ns:project/ns:groupId)"/>
+                <xi:include href=".pom.xml" xpointer="xmlns(ns=http://maven.apache.org/POM/4.0.0)xpointer(/ns:project/ns:artifactId)"/>
+                <xi:include href=".pom.xml" xpointer="xmlns(ns=http://maven.apache.org/POM/4.0.0)xpointer(/ns:project/ns:version)"/>
+              </dependency>
+            </dependencies>
+          </plugin>
+        </plugins>
+      </build>
+    </project>
+  </para>
   <links>
     <link title="Documentation" href="index.html"/>
+    <link title="Maven settings" href="../maven.html"/>
     <link title="Source code" href="http://github.com/beerdragon/helpers"/>
   </links>
 </page>
