@@ -17,9 +17,18 @@
   </licenses>
 
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <beerdragon-m2-repo.url>file://${project.build.directory}/deploy</beerdragon-m2-repo.url>
     <maven-dependency-plugin.version>2.8</maven-dependency-plugin.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <wagon-ftp.version>1.0-beta-6</wagon-ftp.version>
   </properties>
+
+  <distributionManagement>
+    <repository>
+      <id>beerdragon</id>
+      <url>${beerdragon-m2-repo.url}</url>
+    </repository>
+  </distributionManagement>
 
   <build>
     <plugins>
