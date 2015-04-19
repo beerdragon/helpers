@@ -3,13 +3,18 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>uk.co.beerdragon</groupId>
-  <artifactId>helpers</artifactId>
-  <version>0.1.2</version>
-  <packaging>jar</packaging>
+  <artifactId>helpers-parent</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
 
   <name>Miscellaneous Helpers</name>
-  <description>Scripts and resources to assist in development within the uk.co.beerdragon groupId</description>
+  <description>Aggregation module</description>
+
   <licenses>
+    <license>
+      <name>GNU General Public License, Version 3.0</name>
+      <url>http://www.gnu.org/licenses/gpl.txt</url>
+    </license>
     <license>
       <name>GNU Lesser General Public License, Version 3</name>
       <url>http://www.gnu.org/licenses/lgpl.txt</url>
@@ -19,6 +24,7 @@
   <properties>
     <beerdragon-m2-repo.url>file://${project.build.directory}/deploy</beerdragon-m2-repo.url>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <helpers.version>0.1.2</helpers.version>
   </properties>
 
   <distributionManagement>
@@ -27,5 +33,10 @@
       <url>${beerdragon-m2-repo.url}</url>
     </repository>
   </distributionManagement>
+
+  <modules>
+    <module>core</module>
+    <module>junit</module>
+  </modules>
 
 </project>
