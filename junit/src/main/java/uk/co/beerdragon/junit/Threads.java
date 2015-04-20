@@ -1,3 +1,9 @@
+/*
+ * JUnit testing utilities.
+ *
+ * Copyright 2015 by Andrew Ian William Griffin <griffin@beerdragon.co.uk>.
+ * Released under the GNU General Public License.
+ */
 package uk.co.beerdragon.junit;
 
 import java.util.Collection;

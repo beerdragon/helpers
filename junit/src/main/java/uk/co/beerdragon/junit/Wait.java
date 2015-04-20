@@ -1,8 +1,13 @@
+/*
+ * JUnit testing utilities.
+ *
+ * Copyright 2015 by Andrew Ian William Griffin <griffin@beerdragon.co.uk>.
+ * Released under the GNU General Public License.
+ */
 package uk.co.beerdragon.junit;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.CountDownLatch;
@@ -20,9 +25,22 @@ import java.util.concurrent.TimeUnit;
  */
 public final class Wait {
 
-  private static final int MAX_WAIT = 5000;
-
+  /**
+   * Prevents instantiation.
+   */
   private Wait () {
+  }
+
+  /**
+   * Maximum wait time.
+   * <p>
+   * Package visible for testing.
+   * 
+   * @param The
+   *          wait timeout in milliseconds.
+   */
+  /* package */static int maxWait () {
+    return 5000;
   }
 
   /**
@@ -35,9 +53,9 @@ public final class Wait {
    */
   public static void latch (final CountDownLatch latch) {
     try {
-      assertTrue (latch.await (MAX_WAIT, TimeUnit.MILLISECONDS));
+      assertTrue (latch.await (maxWait (), TimeUnit.MILLISECONDS));
     } catch (final InterruptedException e) {
-      fail ();
+      throw new AssertionError (e);
     }
   }
 
@@ -51,7 +69,7 @@ public final class Wait {
    */
   public static <T> T future (final Future<T> future) {
     try {
-      return future.get (MAX_WAIT, TimeUnit.MILLISECONDS);
+      return future.get (maxWait (), TimeUnit.MILLISECONDS);
     } catch (final Exception e) {
       throw new AssertionError (e);
     }
@@ -67,7 +85,7 @@ public final class Wait {
    */
   public static void barrier (final CyclicBarrier barrier) {
     try {
-      barrier.await (MAX_WAIT, TimeUnit.MILLISECONDS);
+      barrier.await (maxWait (), TimeUnit.MILLISECONDS);
     } catch (final Exception e) {
       throw new AssertionError (e);
     }
@@ -83,7 +101,7 @@ public final class Wait {
    */
   public static void executor (final ExecutorService executor) {
     try {
-      executor.awaitTermination (MAX_WAIT, TimeUnit.MILLISECONDS);
+      assertTrue (executor.awaitTermination (maxWait (), TimeUnit.MILLISECONDS));
     } catch (final Exception e) {
       throw new AssertionError (e);
     }
@@ -100,7 +118,7 @@ public final class Wait {
    */
   public static <T> T queue (final BlockingQueue<T> queue) {
     try {
-      final T value = queue.poll (MAX_WAIT, TimeUnit.MILLISECONDS);
+      final T value = queue.poll (maxWait (), TimeUnit.MILLISECONDS);
       assertNotNull (value);
       return value;
     } catch (final InterruptedException e) {
