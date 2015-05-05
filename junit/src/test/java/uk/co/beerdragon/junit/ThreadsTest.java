@@ -97,8 +97,8 @@ public class ThreadsTest {
   }
 
   /**
-   * Tests a slave spawned slave thread is handled by the parent executor. This can be verified by
-   * throwing an exception from the slave spawned thread.
+   * Verifies a slave spawned slave thread is handled by the parent executor. This can be verified
+   * by throwing an exception from the slave spawned thread.
    */
   @Test
   public void testSlaveSpawnedThread () throws Throwable {
