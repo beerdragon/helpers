@@ -27,7 +27,7 @@ import com.google.common.base.Supplier;
 /**
  * Rule for a pool of threads that will be terminated at the end of a test. For example:
  * 
- * <pre class="java">
+ * <pre class="code java">
  * <span class="k">public class</span> <span class="i">UsesChildThreads</span> {
  *
  *  <span class="i">&#064;Rule</span>

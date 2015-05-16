@@ -1,7 +1,7 @@
 <page title="Helpers">
   <para>Miscellaneous helper scripts and resources used to build the other projects.
-  The main components of the project are settings for the Eclipse IDE and resources
-  for creating Javadoc.</para>
+  The main components of the project are settings for the Eclipse IDE, resources for
+  creating Javadoc, and some JUnit test helpers.</para>
   <section title="Eclipse settings">
     <para>All Java source code in these projects has been autoformatted using an
     Eclipse plugin. The settings in <code>eclipse-java-formatting.xml</code> can be
@@ -46,7 +46,13 @@
     class. This pattern then allows code examples to be given in alternative
     languages such as C++.</para>
   </section>
+  <section title="JUnit">
+    <para>The unit testing framework of choice for these projects is JUnit. Some
+    additional rules and static helper methods are defined here for convenience.
+    More details can be found in the Javadocs.</para>
+  </section>
   <links>
+    <link title="Junit helper Javadoc" href="junit/0.1.0-SNAPSHOT/javadoc"/>
     <link title="Maven artifact" href="maven.html"/>
     <link title="Source code" href="http://github.com/beerdragon/helpers"/>
   </links>

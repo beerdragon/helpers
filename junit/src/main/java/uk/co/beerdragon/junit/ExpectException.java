@@ -18,7 +18,7 @@ import org.hamcrest.StringDescription;
  * <p>
  * For example:
  * 
- * <pre class="java">
+ * <pre class="code java">
  * <span class="i">@Test</span>
  * <span class="k">public void</span> <span class="i">test</span> () {
  *   <span class="c">// ... something to set up my test</span>
