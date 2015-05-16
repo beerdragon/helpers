@@ -22,14 +22,30 @@
             <dependencies>
               <comment>...</comment>
               <dependency>
-                <xi:include href=".pom.xml" xpointer="xmlns(ns=http://maven.apache.org/POM/4.0.0)xpointer(/ns:project/ns:groupId)"/>
-                <xi:include href=".pom.xml" xpointer="xmlns(ns=http://maven.apache.org/POM/4.0.0)xpointer(/ns:project/ns:artifactId)"/>
-                <xi:include href=".pom.xml" xpointer="xmlns(ns=http://maven.apache.org/POM/4.0.0)xpointer(/ns:project/ns:version)"/>
+                <xi:include href=".pom-core.xml" xpointer="xmlns(ns=http://maven.apache.org/POM/4.0.0)xpointer(/ns:project/ns:groupId)"/>
+                <xi:include href=".pom-core.xml" xpointer="xmlns(ns=http://maven.apache.org/POM/4.0.0)xpointer(/ns:project/ns:artifactId)"/>
+                <xi:include href=".pom-core.xml" xpointer="xmlns(ns=http://maven.apache.org/POM/4.0.0)xpointer(/ns:project/ns:version)"/>
               </dependency>
             </dependencies>
           </plugin>
         </plugins>
       </build>
+    </project>
+  </para>
+  <para>Adding the following frament to a <code>pom.xml</code> will include
+  the helpers for Java unit testing.</para>
+  <para type="xml">
+    <project>
+      <comment>...</comment>
+      <dependencies>
+        <comment>...</comment>
+        <dependency>
+          <xi:include href=".pom-junit.xml" xpointer="xmlns(ns=http://maven.apache.org/POM/4.0.0)xpointer(/ns:project/ns:groupId)"/>
+          <xi:include href=".pom-junit.xml" xpointer="xmlns(ns=http://maven.apache.org/POM/4.0.0)xpointer(/ns:project/ns:artifactId)"/>
+          <xi:include href=".pom-junit.xml" xpointer="xmlns(ns=http://maven.apache.org/POM/4.0.0)xpointer(/ns:project/ns:version)"/>
+          <scope>test</scope>
+        </dependency>
+      </dependencies>
     </project>
   </para>
   <links>

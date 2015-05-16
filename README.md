@@ -1,6 +1,6 @@
 Miscellaneous helper scripts and resources used to build the other projects.
-The main components of the project are settings for the Eclipse IDE and
-resources for creating Javadoc.
+The main components of the project are settings for the Eclipse IDE, resources
+for creating Javadoc, and some JUnit test helpers.
 
 Eclipse settings
 ----------------
@@ -45,4 +45,11 @@ Would render with appropriate syntax highlighting defined by the stylesheet.
 The styles are divided to give a generic `code` class which defines some
 common formatting and then a more specific `java` class. This pattern then
 allows code examples to be given in alternative languages such as C++.
+
+JUnit
+-----
+
+The unit testing framework of choice for these projects is JUnit. Some
+additional rules and static helper methods are defined here for convenience.
+More details can be found in the Javadocs.
 
