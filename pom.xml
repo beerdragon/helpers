@@ -4,7 +4,7 @@
 
   <groupId>uk.co.beerdragon</groupId>
   <artifactId>helpers-parent</artifactId>
-  <version>0.1.0-SNAPSHOT</version>
+  <version>0.1.0</version>
   <packaging>pom</packaging>
 
   <name>Miscellaneous Helpers</name>
@@ -24,7 +24,6 @@
   <properties>
     <beerdragon-m2-repo.url>file://${project.build.directory}/deploy</beerdragon-m2-repo.url>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <helpers.version>0.1.2</helpers.version>
   </properties>
 
   <distributionManagement>

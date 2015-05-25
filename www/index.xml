@@ -52,7 +52,7 @@
     More details can be found in the Javadocs.</para>
   </section>
   <links>
-    <link title="Junit helper Javadoc" href="junit/0.1.0-SNAPSHOT/javadoc"/>
+    <link title="Junit helper Javadoc" href="junit/0.1.0/javadoc"/>
     <link title="Maven artifact" href="maven.html"/>
     <link title="Source code" href="http://github.com/beerdragon/helpers"/>
   </links>

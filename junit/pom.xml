@@ -4,13 +4,13 @@
 
   <groupId>uk.co.beerdragon</groupId>
   <artifactId>helpers-junit</artifactId>
-  <version>0.1.0-SNAPSHOT</version>
+  <version>0.1.0</version>
   <packaging>jar</packaging>
 
   <parent>
     <groupId>uk.co.beerdragon</groupId>
     <artifactId>helpers-parent</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
+    <version>0.1.0</version>
     <relativePath>../</relativePath>
   </parent>
 
@@ -27,6 +27,7 @@
   <properties>
     <commons-lang3.version>3.2.1</commons-lang3.version>
     <google-collections.version>1.0</google-collections.version>
+    <helpers.version>0.1.2</helpers.version>
     <jacoco-maven-plugin.version>0.7.0.201403182114</jacoco-maven-plugin.version>
     <java.version>1.7</java.version>
     <junit.version>4.12</junit.version>
